@@ -158,6 +158,7 @@ block {
     color: #211522;
     /* text-decoration: none; */
     display: inline-block;
+    font-size:1em;
 }
 
 p{
