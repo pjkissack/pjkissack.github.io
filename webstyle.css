@@ -121,6 +121,9 @@ section{
         top: 0;
         width: 100%;
     }
+    .parallax-container {
+        background-attachment: scroll;
+      }
    }
 
 
