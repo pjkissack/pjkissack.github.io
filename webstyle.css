@@ -49,7 +49,7 @@ body{
 
 .parallax-container {
     /*  this is where the magic happens:  */
-    background-image: url("forest.jpg");
+    background-image: url("forest.JPG");
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
