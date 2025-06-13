@@ -43,7 +43,7 @@
 body{
     color: #211522;
     margin:0;
-    background-color: #c5b8be;
+    background-color: #dcc6d0;
 }
 
 
@@ -71,8 +71,9 @@ body{
 section{
     margin-top: 10px;
     /* background-color: #d3b1c2; */
-    background-color: #e0cbe8;
-    /* outline: solid #d3b1c2; */
+    /* background-color: #e0cbe8; */
+    background-color: #f0e6f0;
+    outline: solid 1px #d3b1c2;
     padding:20px;
     margin: 2% 5% 2% 5%;
     border-radius:12px;
