@@ -172,7 +172,8 @@ p{
 
 .embed section{
     margin-top: 10px;
-    background-color: #d3b1c2;
+    background-color: #f0e6f0;
+    outline: solid 1px #d3b1c2;
     padding:20px;
     display: flex;
     justify-content: center;
