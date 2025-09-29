@@ -101,11 +101,11 @@ section{
         text-align: center;
         background-color: #613659;
         padding: 5px;
-        position: fixed;
+        /* position: fixed; */
         top: 0;
         width: 100%;
         z-index:1000;
-        position:relative
+        position:relative;
     }
     .main {
         margin-top: 150px; /* Add a top margin to avoid content overlay */
@@ -124,7 +124,7 @@ section{
         top: 0;
         width: 100%;
         z-index:1000;
-        position:relative
+        position:relative;
     }
     .parallax-container {
         background-attachment: scroll;
