@@ -104,6 +104,8 @@ section{
         position: fixed;
         top: 0;
         width: 100%;
+        z-index:1000;
+        position:relative
     }
     .main {
         margin-top: 150px; /* Add a top margin to avoid content overlay */
@@ -121,6 +123,8 @@ section{
         padding: 5px;
         top: 0;
         width: 100%;
+        z-index:1000;
+        position:relative
     }
     .parallax-container {
         background-attachment: scroll;
