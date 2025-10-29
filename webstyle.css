@@ -1,23 +1,28 @@
-/* @font-face {
-    font-family: Forum;
-    src: url(https://fonts.googleapis.com/css?family=Forum);
-} */
-
-.forum-regular {
-    font-family: "Forum", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-
+/* Font face definition for Gothic A1 font with regular weight (400) and normal style.
+    This class can be applied to elements to use the Gothic A1 font family. */
 .gothic-a1-regular {
     font-family: "Gothic A1", sans-serif;
     font-weight: 400;
     font-style: normal;
   }
 
+
+/* Styling for menu links in
+  * unvisited (a:link) and visited (a:visited)
+  * hover (a:hover) and active (a:active)
+  states.
+    - font-family: Sets the font to Gothic A1
+    - background-color: Light purple background color (#e0cbe8) in hover/active states
+    - color: Light purple color (#e0cbe8) for text; or dark purple (#211522) in hover/active states
+    - outline: Solid border with color #d3b1c2 in hover/active states
+    - padding: Adds 5px of space inside the link element on all sides
+    - text-align: Centers the text horizontally
+    - text-decoration: Removes the default underline from links
+    - display: Makes links display as inline-block elements for better control
+    - border-radius: Rounds the corners by 5px
+    - transition: Smooth animation effect lasting 0.5 seconds for property changes (like hover effects) */
 #menu a:link, a:visited {
     font-family: Gothic A1;
-    /* color: #c197d2; */
     color:#e0cbe8;
     padding: 5px;
     text-align: center;
@@ -29,7 +34,6 @@
 
 #menu a:hover, a:active {
     font-family: Gothic A1;
-    /* background-color: #c197d2; */
     background-color: #e0cbe8;
     color: #211522;
     outline: solid #d3b1c2;
@@ -39,169 +43,234 @@
     display: inline-block;
     border-radius: 5px;
 }
-  
+
+
+/* Body styling
+    - color: Dark purple text color (#211522)
+    - margin: Removes default margin
+    - background-color: Light purple background (#dcc6d0) */
 body{
-    color: #211522;
-    margin:0;
-    background-color: #dcc6d0;
+     color: #211522;
+     margin:0;
+     background-color: #dcc6d0;
 }
 
 
+/* Parallax container for scrolling effects
+    - background-attachment: Fixed background creates parallax effect
+    - background-position: Centers the background image
+    - background-size: Scales background to cover entire container
+    - min-height: Full viewport height ensures container is tall enough to scroll
+    - display: Flexbox layout for centering content
+    - flex-direction: Stacks items vertically
+    - align-items: Centers items horizontally
+    - justify-content: Centers items vertically */
 .parallax-container {
-    /*  this is where the magic happens:  */
-    /* background-image: url("forest.JPG"); */
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
+     /*  this is where the magic happens:  */
+     /* background-image: url("forest.JPG"); */
+     background-attachment: fixed;
+     background-position: center;
+     background-size: cover;
 
-    /* perspective:1px; */
+     /* perspective:1px; */
   
-    /* dimensions are important, ensure it is tall enough to scroll */ 
-    min-height: 100vh;
+     /* dimensions are important, ensure it is tall enough to scroll */ 
+     min-height: 100vh;
   
-    /* you are free to lay out the container items with flexbox or whatever means you wish */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+     /* you are free to lay out the container items with flexbox or whatever means you wish */
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
 }
 
 
 
+/* Section styling for content blocks
+    - margin-top: Adds 10px space above section
+    - background-color: Very light purple (#f0e6f0)
+    - outline: 1px solid border in color #d3b1c2
+    - padding: 20px internal spacing
+    - margin: Responsive margins (2% top/bottom, 5% left/right)
+    - border-radius: Rounded corners at 12px */
 section{
-    margin-top: 10px;
-    /* background-color: #d3b1c2; */
-    /* background-color: #e0cbe8; */
-    background-color: #f0e6f0;
-    outline: solid 1px #d3b1c2;
-    padding:20px;
-    margin: 2% 5% 2% 5%;
-    border-radius:12px;
+     margin-top: 10px;
+     /* background-color: #d3b1c2; */
+     /* background-color: #e0cbe8; */
+     background-color: #f0e6f0;
+     outline: solid 1px #d3b1c2;
+     padding:20px;
+     margin: 2% 5% 2% 5%;
+     border-radius:12px;
 }
 
 
 
-/* header {
-    color: white;
-    text-align: center;
-    font-size: 20px;
-    background-color: #613659;
-    padding: 2px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-} */
-
+/* Media query for desktop screens (width >= 1300px or height <= 1300px)
+    - nav: Fixed navigation bar at top with dark purple background
+    - position: Fixed keeps nav at top during scroll
+    - z-index: Ensures nav stays above other content
+    - .main: Adds top margin to prevent content from hiding under fixed nav */
 @media (min-width:1300px) or (max-height:1300px){
-    /*Desktop css*/
+     /*Desktop css*/
 
-    nav {
-        color: white;
-        font-size: 20px;
-        text-align: center;
-        background-color: #613659;
-        padding: 5px;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index:1000;
+     nav {
+          color: white;
+          font-size: 20px;
+          text-align: center;
+          background-color: #613659;
+          padding: 5px;
+          position: fixed;
+          top: 0;
+          width: 100%;
+          z-index:1000;
+     }
+     .main {
+          margin-top: 150px; /* Add a top margin to avoid content overlay */
+        }
+     
     }
-    .main {
-        margin-top: 150px; /* Add a top margin to avoid content overlay */
-      }
-    
-   }
+
+/* Media query for mobile/tablet screens (width <= 1300px and height >= 1300px)
+    - nav: Non-fixed navigation for better mobile experience
+    - .parallax-container: Changes to scroll attachment for mobile compatibility */
 @media (max-width:1300px) and (min-height:1300px) {
-    /*Mobile css*/
+     /*Mobile css*/
 
-    nav {
-        color: white;
-        font-size: 20px;
-        text-align: center;
-        background-color: #613659;
-        padding: 5px;
-        top: 0;
-        width: 100%;
-        z-index:1000;
+     nav {
+          color: white;
+          font-size: 20px;
+          text-align: center;
+          background-color: #613659;
+          padding: 5px;
+          top: 0;
+          width: 100%;
+          z-index:1000;
+     }
+     .parallax-container {
+          background-attachment: scroll;
+        }
     }
-    .parallax-container {
-        background-attachment: scroll;
-      }
-   }
 
 
 
 
 
 
+/* Horizontal rule styling within .main
+    - opacity: Makes HR 40% transparent for subtle appearance */
 .main hr {
-    opacity: 0.4;
+     opacity: 0.4;
 }
 
+/* H1 heading styling for name header text at top of page
+    - font-family: Gothic A1 font
+    - text-align: Centers heading text */
 h1{
-    font-family: Gothic A1;
-    text-align: center;
+     font-family: Gothic A1;
+     text-align: center;
 }
 
+/* H2 heading styling for section block header text
+    - font-family: Gothic A1 font
+    - text-align: Left-aligned text */
 h2{
-    font-family: Gothic A1;
-    text-align: left;
+     font-family: Gothic A1;
+     text-align: left;
 }
 
+/* H3 heading styling for subsection header text
+    - font-family: Gothic A1 font
+    - text-align: Left-aligned text */
 h3{
-    font-family: Gothic A1;
-    text-align: left;
+     font-family: Gothic A1;
+     text-align: left;
 }
 
+/* Block element styling (custom element)
+    - width: 18px wide
+    - height: 72px tall
+    - padding: 10px internal spacing
+    - border: 5px solid black border
+    - margin: No external spacing */
 block {
-    width: 18px;
-    height: 72px;
-    padding: 10px;
-    border: 5px solid black;
-    margin: 0;
+     width: 18px;
+     height: 72px;
+     padding: 10px;
+     border: 5px solid black;
+     margin: 0;
 }
 
+/* Link styling within .main sections
+    - font-family: Verdana font
+    - color: Dark purple (#211522)
+    - display: Inline-block for better control
+    - font-size: 1em (default size) */
 .main a {
-    font-family: verdana;
-    color: #211522;
-    /* text-decoration: none; */
-    display: inline-block;
-    font-size:1em;
+     font-family: verdana;
+     color: #211522;
+     /* text-decoration: none; */
+     display: inline-block;
+     font-size:1em;
 }
 
+/* Paragraph styling
+    - font-family: Verdana font
+    - text-align: Left-aligned text */
 p{
-    font-family: verdana;
-    text-align: left;
+     font-family: verdana;
+     text-align: left;
 }
 
+/* Link styling within .feed section
+    - font-family: Verdana font
+    - color: Dark purple (#211522)
+    - text-decoration: Removes underline
+    - font-weight: Bold text
+    - display: Inline-block
+    - font-size: 1em (default size) */
 .feed a{
-    font-family: verdana;
-    color: #211522;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    font-size:1em;
+     font-family: verdana;
+     color: #211522;
+     text-decoration: none;
+     font-weight: bold;
+     display: inline-block;
+     font-size:1em;
 }
 
+/* Blockquote styling within .feed
+    - font-family: Gothic A1 font for quoted text */
 .feed blockquote{
-    font-family: Gothic A1
+     font-family: Gothic A1
 }
 
+/* Section styling within .embed containers (NOT USED)
+    - margin-top: 10px space above
+    - background-color: Very light purple (#f0e6f0)
+    - outline: 1px solid border (#d3b1c2)
+    - padding: 20px internal spacing
+    - display: Inline-block for automatic width
+    - justify-content: Centers content horizontally
+    - border-radius: Rounded 12px corners
+    - text-align: Centers text
+    - width: Auto width based on content */
 .embed section{
-    margin-top: 10px;
-    background-color: #f0e6f0;
-    outline: solid 1px #d3b1c2;
-    padding:20px;
-    display: flex;
-    justify-content: center;
-    border-radius:12px;
-    text-align: center;
-    width: auto;
-    display: inline-block;
+     margin-top: 10px;
+     background-color: #f0e6f0;
+     outline: solid 1px #d3b1c2;
+     padding:20px;
+     display: flex;
+     justify-content: center;
+     border-radius:12px;
+     text-align: center;
+     width: auto;
+     display: inline-block;
 }
 
+/* Unordered list styling
+    - font-family: Verdana font
+    - text-align: Left-aligned list items */
 ul{
-    font-family: verdana;
-    text-align: left;
+     font-family: verdana;
+     text-align: left;
 }
-
