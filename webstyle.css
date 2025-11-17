@@ -111,14 +111,37 @@ section{
 
 
 /* Media query for desktop screens (width >= 1300px or height <= 1300px)
-    - nav: Fixed navigation bar at top with dark purple background
-    - position: Fixed keeps nav at top during scroll
-    - z-index: Ensures nav stays above other content
     - .main: Adds top margin to prevent content from hiding under fixed nav */
 @media (min-width:1300px) or (max-height:1300px){
      /*Desktop css*/
 
-     nav {
+          
+    }
+
+/* Media query for mobile/tablet screens (width <= 1300px and height >= 1300px)
+    - .parallax-container: Changes to scroll attachment for mobile compatibility */
+@media (max-width:1300px) and (min-height:1300px) {
+     /*Mobile css*/
+
+     /* nav {
+          color: white;
+          font-size: 20px;
+          text-align: center;
+          background-color: #613659;
+          padding: 5px;
+          top: 0;
+          width: 100%;
+          z-index:1000;
+     } */
+     /* .parallax-container {
+          background-attachment: scroll;
+        } */
+    }
+
+/* - nav: Fixed navigation bar at top with dark purple background
+- position: Fixed keeps nav at top during scroll
+- z-index: Ensures nav stays above other content */
+nav {
           color: white;
           font-size: 20px;
           text-align: center;
@@ -129,36 +152,10 @@ section{
           width: 100%;
           z-index:1000;
      }
-     .main {
+
+.main {
           margin-top: 150px; /* Add a top margin to avoid content overlay */
         }
-     
-    }
-
-/* Media query for mobile/tablet screens (width <= 1300px and height >= 1300px)
-    - nav: Non-fixed navigation for better mobile experience
-    - .parallax-container: Changes to scroll attachment for mobile compatibility */
-@media (max-width:1300px) and (min-height:1300px) {
-     /*Mobile css*/
-
-     nav {
-          color: white;
-          font-size: 20px;
-          text-align: center;
-          background-color: #613659;
-          padding: 5px;
-          top: 0;
-          width: 100%;
-          z-index:1000;
-     }
-     /* .parallax-container {
-          background-attachment: scroll;
-        } */
-    }
-
-
-
-
 
 
 /* Horizontal rule styling within .main
