@@ -195,7 +195,7 @@ nav {
      }
 
 .main {
-          margin-top: 210px; /* Add a top margin to avoid content overlay */
+          margin-top: 180px; /* Add a top margin to avoid content overlay */
         }
 
 
@@ -209,6 +209,7 @@ nav {
     - font-family: Gothic A1 font
     - text-align: Centers heading text */
 h1{
+     font-size: 1.5em;
      font-family: Gothic A1;
      text-align: center;
 }
